@@ -45,13 +45,13 @@ const Hero = memo(
               </span>
               websites and apps that work.
             </h1>
-            <p className="group inline-block text-base text-tertiary">
+            <p className="inline-flex text-base text-tertiary gap-x-1.5">
               with the team at{" "}
               <a
                 href="https://under.io"
                 target="_blank"
                 rel="noreferrer"
-                className="-ml-2 inline-flex cursor-pointer gap-x-2 px-2 transition duration-150 ease-in-out group-hover:bg-gray-950 group-hover:text-white group-hover:dark:bg-white group-hover:dark:text-black"
+                className="group inline-flex cursor-pointer gap-x-2 px-1 transition duration-150 ease-in-out hover:bg-gray-950 hover:text-white hover:dark:bg-white hover:dark:text-black"
               >
                 UNDER.IO
                 <span className="opacity-0 group-hover:opacity-100">🔥</span>
