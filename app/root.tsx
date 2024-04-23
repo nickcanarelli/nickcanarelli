@@ -62,6 +62,30 @@ export function App() {
         <Links />
       </head>
       <body>
+        {process.env.NODE_ENV === "development" || !data.gaTrackingId ? null : (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${data.gaTrackingId}`}
+            />
+            <script
+              async
+              id="gtag-init"
+              dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', '${data.gaTrackingId}', {
+                  page_path: window.location.pathname,
+                });
+              `,
+              }}
+            />
+          </>
+        )}
+
         <div className="relative flex min-h-screen flex-col overflow-hidden transition-colors duration-150">
           <Header />
           <Outlet />
