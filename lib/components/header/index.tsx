@@ -1,4 +1,11 @@
-import { ComponentPropsWithoutRef, forwardRef, memo, useCallback } from "react";
+import {
+  ComponentPropsWithoutRef,
+  forwardRef,
+  memo,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import { Theme, useTheme } from "remix-themes";
 
 import { cn } from "~/utils";
@@ -8,7 +15,13 @@ type THeader = ComponentPropsWithoutRef<"div">;
 const Header = memo(
   forwardRef<HTMLDivElement, THeader>(
     ({ className, ...props }, ref): JSX.Element => {
+      const [clientTheme, setClientTheme] = useState<string | null>();
       const [theme, setTheme] = useTheme();
+
+      /** Needed for hydration to work properly. */
+      useEffect(() => {
+        setClientTheme(theme);
+      }, [theme]);
 
       const toggleTheme = useCallback(() => {
         setTheme((theme) => (theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
@@ -42,7 +55,7 @@ const Header = memo(
             >
               toggleTheme(
               <span className="font-bold text-primary group-hover:animate-pulse">
-                {theme}
+                {clientTheme}
               </span>
               )
             </button>
