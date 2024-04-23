@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"],
-      "~/styles/*": ["./styles/*"]
+      "~/styles/*": ["./styles/*"],
+      "~/utils": ["./lib/utils/index.ts"]
     },
 
     // Vite takes care of building everything, not tsc.
