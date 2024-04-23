@@ -21,7 +21,6 @@ import {
   useTheme,
 } from "remix-themes";
 import { cn } from "~/utils";
-import { Header } from "~/components";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -63,7 +62,6 @@ export function App() {
       </head>
       <body>
         <div className="relative flex min-h-screen flex-col overflow-hidden transition-colors duration-150">
-          <Header />
           <Outlet />
         </div>
         <ScrollRestoration />
