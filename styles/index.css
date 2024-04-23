@@ -1,0 +1,16 @@
+@import "./fonts.css";
+@import "./theme/index.css";
+
+@tailwind base;
+
+@layer base {
+  :root {
+    @apply font-fira_code antialiased;
+  }
+  html {
+    @apply h-screen w-full bg-primary text-primary selection:bg-brand-500/20 selection:text-brand-500;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
