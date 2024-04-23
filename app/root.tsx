@@ -1,6 +1,5 @@
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -22,6 +21,7 @@ import {
   useTheme,
 } from "remix-themes";
 import { cn } from "~/utils";
+import { Footer, Header } from "~/components";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -62,10 +62,13 @@ export function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <div className="relative flex min-h-screen flex-col overflow-hidden transition-colors duration-150">
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
         <ScrollRestoration />
         <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
       </body>
     </html>
   );
