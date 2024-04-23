@@ -27,7 +27,7 @@ const MyWork = memo(
       >
         <div className="flex flex-col gap-6">
           <p className="text-base text-tertiary">
-            /* Pixels I've contributed to */
+            /* Pixels i've contributed to */
           </p>
           <p className="text-base text-tertiary">
             {jsxCode}

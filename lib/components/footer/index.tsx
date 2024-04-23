@@ -20,7 +20,7 @@ const Footer = memo(
               Tailwind. */
             </p>
 
-            <p className="text-sm text-tertiary">cya()</p>
+            <p className="text-sm text-tertiary">bye()</p>
           </div>
         </footer>
       );
