@@ -1,5 +1,6 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Hero } from "~/components";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { Hero, TechStack } from "~/components";
+import { quotes } from "~/constants";
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,6 +9,17 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader: LoaderFunction = async () => {
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  return [quote];
+};
+
 export default function Index() {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <TechStack />
+    </>
+  );
 }
