@@ -31,8 +31,8 @@ const GetInTouch = memo(
               <code className="text-7xl text-brand-500">=</code>
             </pre>
           </div>
-          <div className="grid sm:grid-cols-2">
-            <div className="flex flex-col justify-center items-center">
+          <div className="grid sm:grid-cols-2 gap-12">
+            <div className="flex flex-col justify-center items-center order-2 sm:order-1">
               <div className="space-y-4">
                 <p className="text-base text-tertiary">/* Find me on */</p>
                 <ul className="space-y-4 text-3xl font-medium text-center sm:text-left">
@@ -51,9 +51,9 @@ const GetInTouch = memo(
                 </ul>
               </div>
             </div>
-            <div className="space-y-4">
-              <div className="max-w-lg space-y-4">
-                <p className="text-base text-tertiary">/* Get in touch */</p>
+            <div className="space-y-4 order-1 sm:order-2">
+              <div className="sm:max-w-lg space-y-4 text-center sm:text-left ">
+                <p className="text-base text-tertiary ">/* Get in touch */</p>
                 <p className="text-2xl font-medium">
                   Have a project in mind? Lets create something great together.
                 </p>

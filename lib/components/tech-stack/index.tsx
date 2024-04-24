@@ -192,7 +192,7 @@ const TechStack = memo(
             <code className="text-base text-tertiary">{jsxCode}</code>
           </pre>
         </div>
-        <div className="relative z-10 grid lg:grid-cols-[35%_1fr] gap-12 lg:gap-16">
+        <div className="relative z-10 grid lg:grid-cols-[35%_1fr] gap-16">
           <motion.div
             className="flex flex-col justify-center gap-2 order-2 lg:order-1"
             variants={{
