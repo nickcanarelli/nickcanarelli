@@ -1,3 +1,4 @@
+import { RocketIcon } from 'lucide-react'
 import { ComponentPropsWithoutRef, forwardRef, memo } from 'react'
 
 import { socials } from '~/constants'
@@ -25,9 +26,10 @@ const GetInTouch = memo(
                       href={social.url}
                       target='_blank'
                       rel='noreferrer'
-                      className='hover:animate-pulse'
+                      className='group flex gap-x-4 hover:animate-pulse'
                     >
                       {social.name}()
+                      <RocketIcon className='opacity-0 transition duration-150 ease-in-out group-hover:opacity-100' />
                     </a>
                   </li>
                 ))}
