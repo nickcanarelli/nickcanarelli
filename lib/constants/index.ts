@@ -1,2 +1,5 @@
-export { default as quotes } from "./quotes";
-export { default as myWork } from "./my-work";
+export { default as myWork } from './my-work'
+export { default as quotes } from './quotes'
+export { default as socials } from './socials'
+export { default as stack } from './stack'
+export { default as words } from './words'
