@@ -38,9 +38,9 @@ const Hero = memo(
               "Nick"
             </p>
 
-            <h1 className="flex max-w-6xl flex-col gap-x-2 gap-y-1 text-4xl font-medium sm:gap-y-2 md:text-5xl lg:text-6xl">
+            <h1 className="flex max-w-6xl flex-col gap-x-2 gap-y-1 text-3xl font-medium sm:gap-y-2 md:text-5xl lg:text-6xl">
               A software engineer
-              <span className="flex h-full min-h-0 flex-wrap gap-x-8 text-wrap">
+              <span className="flex h-full min-h-0 flex-wrap gap-x-5 md:gap-x-8 text-wrap">
                 building <TypewriterEffect words={words} />
               </span>
               websites and apps that work.

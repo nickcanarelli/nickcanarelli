@@ -1,5 +1,11 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
-import { GetInTouch, Hero, MyWork, TechStack } from "~/components";
+import {
+  GetInTouch,
+  Hero,
+  MyWork,
+  RecentBlogPosts,
+  TechStack,
+} from "~/components";
 import { quotes } from "~/constants";
 
 export const meta: MetaFunction = () => {
@@ -21,6 +27,7 @@ export default function Index() {
       <Hero />
       <TechStack />
       <MyWork />
+      {/* <RecentBlogPosts /> */}
       <GetInTouch />
     </>
   );

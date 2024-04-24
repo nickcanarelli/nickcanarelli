@@ -14,8 +14,8 @@ const Footer = memo(
           className={cn("container py-6", className)}
           {...props}
         >
-          <div className="flex items-center justify-between">
-            <p className="text-sm text-tertiary">
+          <div className="flex flex-col gap-6 sm:flex-row items-center justify-between">
+            <p className="text-sm text-tertiary text-center sm:text-left">
               /* Built with ❤️ using Typescript, Vite, React, Remix, and
               Tailwind. */
             </p>

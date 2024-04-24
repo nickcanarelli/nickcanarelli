@@ -22,12 +22,12 @@ const MyWork = memo(
     return (
       <div
         ref={ref}
-        className={cn("container relative py-20", className)}
+        className={cn("container relative py-12 sm:py-20", className)}
         {...props}
       >
         <div className="flex flex-col gap-6">
           <p className="text-base text-tertiary">
-            /* Pixels i've contributed to */
+            /* Projects i've contributed to */
           </p>
           <p className="text-base text-tertiary">
             {jsxCode}
@@ -36,7 +36,7 @@ const MyWork = memo(
           </p>
           <motion.ul
             ref={listRef}
-            className="grid grid-cols-3 gap-10"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-14"
             variants={{
               hidden: { opacity: 0 },
               show: {

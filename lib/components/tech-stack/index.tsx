@@ -1,7 +1,13 @@
 import { useLoaderData } from "@remix-run/react";
 import { motion, useInView } from "framer-motion";
 import { DotIcon } from "lucide-react";
-import { ComponentPropsWithoutRef, forwardRef, memo, useRef } from "react";
+import {
+  ComponentPropsWithoutRef,
+  cloneElement,
+  forwardRef,
+  memo,
+  useRef,
+} from "react";
 
 import {
   AWSLogo,
@@ -47,139 +53,112 @@ const stack = [
   {
     id: "next",
     name: "Next.js",
-    logo: (
-      <NextJSLogo
-        width={85}
-        height={55}
-        fill="rgb(var(--color-text-primary) / 1)"
-      />
-    ),
+    logo: <NextJSLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "remix",
     name: "Remix",
-    logo: (
-      <RemixLogo
-        height={55}
-        width={55}
-        fill="rgb(var(--color-text-primary) / 1)"
-      />
-    ),
+    logo: <RemixLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "typescript",
     name: "Typescript",
-    logo: <TypescriptLogo {...dimensions} />,
+    logo: <TypescriptLogo />,
   },
   {
     id: "javascript",
     name: "Javascript",
-    logo: <JavascriptLogo {...dimensions} />,
+    logo: <JavascriptLogo />,
   },
   {
     id: "mongo",
     name: "MongoDB",
-    logo: <MongoDBLogo width={31} height={65} />,
+    logo: <MongoDBLogo />,
   },
   {
     id: "tailwind",
     name: "Tailwind",
-    logo: <TailwindLogo width={52} height={32} />,
+    logo: <TailwindLogo />,
   },
   {
     id: "figma",
     name: "Figma",
-    logo: <FigmaLogo {...dimensions} />,
+    logo: <FigmaLogo />,
   },
   {
     id: "dynamodb",
     name: "DynamoDB",
-    logo: <DynamoDBLogo width={65} height={55} />,
+    logo: <DynamoDBLogo />,
   },
   {
     id: "aws",
     name: "AWS",
-    logo: (
-      <AWSLogo
-        width={65}
-        height={55}
-        fill="rgb(var(--color-text-primary) / 1)"
-      />
-    ),
+    logo: <AWSLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "git",
     name: "Git",
-    logo: <GitLogo {...dimensions} />,
+    logo: <GitLogo />,
   },
   {
     id: "node",
     name: "Node",
-    logo: <NodeLogo {...dimensions} />,
+    logo: <NodeLogo />,
   },
   {
     id: "cypress",
     name: "Cypress",
-    logo: (
-      <CypressLogo {...dimensions} fill="rgb(var(--color-text-primary) / 1)" />
-    ),
+    logo: <CypressLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "playwright",
     name: "Playwright",
-    logo: <PlaywrightLogo {...dimensions} />,
+    logo: <PlaywrightLogo />,
   },
   {
     id: "jest",
     name: "Jest",
-    logo: <JestLogo {...dimensions} />,
+    logo: <JestLogo />,
   },
   {
     id: "vite",
     name: "Vite",
-    logo: <ViteLogo {...dimensions} />,
+    logo: <ViteLogo />,
   },
   {
     id: "turborepo",
     name: "Turborepo",
-    logo: (
-      <TurborepoLogo
-        {...dimensions}
-        fill="rgb(var(--color-text-primary) / 1)"
-      />
-    ),
+    logo: <TurborepoLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "github",
     name: "Github",
-    logo: (
-      <GitHubLogo {...dimensions} fill="rgb(var(--color-text-primary) / 1)" />
-    ),
+    logo: <GitHubLogo fill="rgb(var(--color-text-primary) / 1)" />,
   },
   {
     id: "prettier",
     name: "Prettier",
-    logo: <PrettierLogo {...dimensions} />,
+    logo: <PrettierLogo />,
   },
   {
     id: "webpack",
     name: "Webpack",
-    logo: <WebpackLogo {...dimensions} />,
+    logo: <WebpackLogo />,
   },
   {
     id: "storybook",
     name: "Storybook",
-    logo: <StorybookLogo {...dimensions} />,
+    logo: <StorybookLogo />,
   },
   {
     id: "eslint",
     name: "ESLint",
-    logo: <ESLintLogo {...dimensions} />,
+    logo: <ESLintLogo />,
   },
   {
     id: "wordpress",
     name: "Wordpress",
-    logo: <WordpressLogo {...dimensions} />,
+    logo: <WordpressLogo />,
   },
 ];
 
@@ -205,7 +184,7 @@ const TechStack = memo(
     return (
       <div
         ref={ref}
-        className={cn("container relative pb-20", className)}
+        className={cn("container relative py-12 sm:py-20", className)}
         {...props}
       >
         <div className="absolute bottom-[calc(100%-10%)] left-[calc(100%-30px)]">
@@ -213,9 +192,9 @@ const TechStack = memo(
             <code className="text-base text-tertiary">{jsxCode}</code>
           </pre>
         </div>
-        <div className="relative z-10 grid grid-cols-[35%_1fr] gap-16">
+        <div className="relative z-10 grid lg:grid-cols-[35%_1fr] gap-12 lg:gap-16">
           <motion.div
-            className="flex flex-col justify-center gap-2"
+            className="flex flex-col justify-center gap-2 order-2 lg:order-1"
             variants={{
               hidden: { opacity: 0 },
               show: { opacity: 1, transition: { delay: 0.4 } },
@@ -223,17 +202,17 @@ const TechStack = memo(
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
           >
-            <p className="text-lg">"{quote.text}"</p>
+            <p className="text-2xl">"{quote.text}"</p>
             <p className="text-tertiary">- {quote.author}</p>
           </motion.div>
 
-          <div className="flex flex-col gap-6">
-            <p className="base -ml-14 text-tertiary">
+          <div className="flex flex-col gap-6 order-1 lg:order-2">
+            <p className="text-base md:-ml-14 text-tertiary">
               const stack: TTech[] = [
             </p>
             <motion.ul
               ref={listRef}
-              className="grid grid-cols-6 gap-4"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4"
               variants={{
                 hidden: { opacity: 0 },
                 show: {
@@ -249,25 +228,27 @@ const TechStack = memo(
               {stack.map((tech) => (
                 <motion.li
                   key={tech.id}
-                  className="flex h-[150px] flex-col items-center justify-center space-y-6 rounded-md bg-secondary"
+                  className="flex flex-col items-center p-3 justify-center space-y-6 rounded-md bg-secondary"
                   variants={{
                     hidden: { opacity: 0 },
                     show: { opacity: 1 },
                   }}
                 >
-                  <div className="flex h-10 items-center sm:h-20">
-                    {tech.logo}
+                  <div className="flex items-center h-20">
+                    {cloneElement(tech.logo, {
+                      className: "w-full h-full max-w-[55px] max-h-[45px]",
+                    })}
                   </div>
                   <p className="text-center text-sm">{tech.name}</p>
                 </motion.li>
               ))}
             </motion.ul>
-            <p className="-ml-14 flex text-sm text-tertiary">
+            <p className="md:-ml-14 flex text-sm text-tertiary">
               {Array.from({ length: 3 }).map((_, i) => (
                 <DotIcon key={i} className="-mr-3" />
               ))}
             </p>
-            <p className="base -ml-14 text-tertiary">]</p>
+            <p className="text-base md:-ml-14 text-tertiary">]</p>
           </div>
         </div>
       </div>
