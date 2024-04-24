@@ -10,7 +10,7 @@
     "format": "prettier . --write",
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
-    "prepare": "husky install"
+    "prepare": "npx husky install"
   },
   "dependencies": {
     "@remix-run/node": "^2.9.0",
