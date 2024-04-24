@@ -57,6 +57,11 @@ const Hero = memo(
                 <span className="opacity-0 group-hover:opacity-100">🔥</span>
               </a>
             </p>
+            {/* <div>
+              <button className="rounded-full border border-success-utility-200 bg-success-utility-50 px-2 py-0.5 text-xs font-medium text-success-utility-700">
+                Available
+              </button>
+            </div> */}
           </div>
         </section>
       );

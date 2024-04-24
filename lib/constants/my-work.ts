@@ -12,12 +12,12 @@ const myWork = [
   {
     id: "3",
     description:
-      "Built a UI component library, tested for reliability and performance with Cypress",
+      "Built a UI component library tested for reliability and performance with Cypress",
   },
   {
     id: "4",
     description:
-      "Refactored legacy codebases, resulting in substantial improvements in performance",
+      "Refactored legacy codebases resulting in substantial improvements in performance",
   },
   {
     id: "5",
