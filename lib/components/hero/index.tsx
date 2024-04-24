@@ -18,7 +18,7 @@ const Hero = memo(
             const name: <span className='text-quaternary'>string</span> = "Nick"
           </p>
 
-          <h1 className='flex max-w-6xl flex-col gap-x-2 gap-y-1 text-3xl font-medium sm:gap-y-2 md:text-5xl lg:text-6xl'>
+          <h1 className='flex max-w-6xl flex-col gap-x-2 text-3xl font-medium md:text-5xl md:!leading-[60px] lg:text-6xl lg:!leading-[70px]'>
             A software engineer
             <span className='flex h-full min-h-0 flex-wrap gap-x-5 text-wrap md:gap-x-8'>
               building <TypewriterEffect words={words} />
