@@ -23,7 +23,7 @@ const Hero = memo(
             <span className='flex h-full min-h-0 flex-wrap gap-x-5 text-wrap md:gap-x-8'>
               building <TypewriterEffect words={words} />
             </span>
-            websites and apps that work.
+            interfaces that deliver results.
           </h1>
           <p className='inline-flex gap-x-1.5 text-base text-tertiary'>
             with the team at{' '}

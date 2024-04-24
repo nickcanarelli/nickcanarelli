@@ -8,12 +8,12 @@ const Footer = memo(
   forwardRef<HTMLDivElement, TFooter>(({ className, ...props }, ref): JSX.Element => {
     return (
       <footer ref={ref} className={cn('container py-6', className)} {...props}>
-        <div className='flex flex-col items-center justify-between gap-6 sm:flex-row'>
+        <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>
           <p className='text-center text-sm text-tertiary sm:text-left'>
             /* Built with ❤️ using Typescript, Vite, React, Remix, and Tailwind. */
           </p>
 
-          <p className='text-sm text-tertiary'>bye()</p>
+          {/* <p className='text-sm text-tertiary'>bye()</p> */}
         </div>
       </footer>
     )

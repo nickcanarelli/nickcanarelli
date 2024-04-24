@@ -4,7 +4,14 @@ import { GetInTouch, Hero, MyWork, TechStack } from '~/components'
 import { quotes } from '~/constants'
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }]
+  return [
+    { title: 'Nick Canarelli | Freelance Software Engineer' },
+    {
+      name: 'description',
+      content:
+        'Dedicated software engineer passionate about building innovative solutions that deliver results.',
+    },
+  ]
 }
 
 export const loader: LoaderFunction = async () => {

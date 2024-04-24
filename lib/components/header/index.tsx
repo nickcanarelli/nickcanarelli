@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react'
 import { ComponentPropsWithoutRef, forwardRef, memo, useCallback, useEffect, useState } from 'react'
 import { Theme, useTheme } from 'remix-themes'
 
@@ -23,13 +24,11 @@ const Header = memo(
       <header ref={ref} className={cn('container relative z-10', className)} {...props}>
         <div className='flex h-16 items-center justify-between'>
           <div className='flex items-center gap-x-4'>
-            <div className='group cursor-pointer'>
-              <p className='text-2xl font-bold tracking-tight text-primary'>
-                <span className='text-brand-500 group-hover:animate-pulse'>_</span>
-                nick
-                <span className='font-normal'>canarelli</span>
-              </p>
-            </div>
+            <Link to='/' className='group text-2xl font-bold tracking-tight text-primary'>
+              <span className='text-brand-500 group-hover:animate-pulse'>_</span>
+              nick
+              <span className='font-normal'>canarelli</span>
+            </Link>
           </div>
 
           <button

@@ -1,4 +1,4 @@
-import { RocketIcon } from 'lucide-react'
+import { MoveRightIcon } from 'lucide-react'
 import { ComponentPropsWithoutRef, forwardRef, memo } from 'react'
 
 import { socials } from '~/constants'
@@ -29,7 +29,7 @@ const GetInTouch = memo(
                       className='group flex gap-x-4 hover:animate-pulse'
                     >
                       {social.name}()
-                      <RocketIcon className='opacity-0 transition duration-150 ease-in-out group-hover:opacity-100' />
+                      <MoveRightIcon className='text-brand-500 opacity-0 transition duration-150 ease-in-out group-hover:opacity-100' />
                     </a>
                   </li>
                 ))}
@@ -43,7 +43,12 @@ const GetInTouch = memo(
                 Have a project in mind? Lets create something great together.
               </p>
               <p>
-                <a href='#contact' className='animate-pulse text-2xl font-medium text-brand-500'>
+                <a
+                  href='mailto:info@nickcanarelli.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='animate-pulse text-2xl font-medium text-brand-500'
+                >
                   contact()
                 </a>
               </p>
