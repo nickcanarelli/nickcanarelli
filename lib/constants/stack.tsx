@@ -1,11 +1,13 @@
 import {
   AWSLogo,
+  CSSLogo,
   CypressLogo,
   DynamoDBLogo,
   ESLintLogo,
   FigmaLogo,
   GitHubLogo,
   GitLogo,
+  HTML5Logo,
   JavascriptLogo,
   JestLogo,
   MongoDBLogo,
@@ -15,6 +17,7 @@ import {
   PrettierLogo,
   ReactLogo,
   RemixLogo,
+  SassLogo,
   StorybookLogo,
   TailwindLogo,
   TurborepoLogo,
@@ -139,6 +142,21 @@ const stack = [
     id: 'wordpress',
     name: 'Wordpress',
     logo: <WordpressLogo />,
+  },
+  {
+    id: 'html5',
+    name: 'HTML5',
+    logo: <HTML5Logo fill='rgb(var(--color-text-primary) / 1)' />,
+  },
+  {
+    id: 'css',
+    name: 'CSS',
+    logo: <CSSLogo fill='rgb(var(--color-text-primary) / 1)' />,
+  },
+  {
+    id: 'sass',
+    name: 'Sass',
+    logo: <SassLogo />,
   },
 ]
 
