@@ -35,7 +35,7 @@ const GetInTouch = memo(
             <div className="flex flex-col justify-center items-center order-2 sm:order-1">
               <div className="space-y-4">
                 <p className="text-base text-tertiary">/* Find me on */</p>
-                <ul className="space-y-4 text-3xl font-medium text-center sm:text-left">
+                <ul className="space-y-4 text-2xl font-medium text-center sm:text-left">
                   {socials.map((social) => (
                     <li key={social.id}>
                       <a
