@@ -10,7 +10,7 @@ type THero = ComponentPropsWithoutRef<'div'>
 const Hero = memo(
   forwardRef<HTMLDivElement, THero>(({ className, ...props }, ref): JSX.Element => {
     return (
-      <section ref={ref} className={cn('container relative -mt-16 h-screen', className)} {...props}>
+      <section ref={ref} className={cn('container relative -mt-20 h-screen', className)} {...props}>
         <div className='flex h-full flex-col justify-center space-y-4'>
           <p className='text-base text-tertiary'>
             hello()

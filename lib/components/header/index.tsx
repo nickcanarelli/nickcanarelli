@@ -22,12 +22,18 @@ const Header = memo(
 
     return (
       <header ref={ref} className={cn('container relative z-10', className)} {...props}>
-        <div className='flex h-16 items-center justify-between'>
+        <div className='flex h-20 items-center justify-between'>
           <div className='flex items-center gap-x-4'>
-            <Link to='/' className='group text-2xl font-bold tracking-tight text-primary'>
-              <span className='text-brand-500 group-hover:animate-pulse'>_</span>
-              nick
-              <span className='font-normal'>canarelli</span>
+            <Link
+              to='/'
+              className='group flex gap-x-1 space-x-1 text-2xl font-bold tracking-tight text-primary'
+            >
+              <span className='text-brand-500 group-hover:animate-pulse'>{`<`}</span>
+              <div>
+                <span>nick</span>
+                <span className='font-normal'>canarelli</span>
+              </div>
+              <span className='text-brand-500 group-hover:animate-pulse'>{`/>`}</span>
             </Link>
           </div>
 
